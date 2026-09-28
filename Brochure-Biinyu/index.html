@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biinyu Studio | Experiencias interactivas que funcionan</title>
+  <meta name="description" content="Convertimos los retos de tu empresa en experiencias interactivas que funcionan: plataformas, apps, videojuegos y experiencias inmersivas. Estudio creativo desde Cartagena, Colombia.">
+  <meta name="theme-color" content="#3CB4FF">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Biinyu Studio | Experiencias interactivas que funcionan">
+  <meta property="og:description" content="Plataformas, apps, videojuegos y experiencias inmersivas creadas con la imaginación y el cuidado de un videojuego.">
+  <meta property="og:image" content="assets/img/mascota.png">
+  <meta property="og:locale" content="es_CO">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon-biinyu.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/mascota.webp" type="image/webp">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Unidad de diseño basada en el ancho real (sin la barra de desplazamiento),
+    // para que el HTML y los SVG de fondo/líneas escalen exactamente igual
+    (function () {
+      var set = function () {
+        var w = Math.min(document.documentElement.clientWidth, 1920);
+        document.documentElement.style.setProperty('--u', (w / 1920) + 'px');
+      };
+      set();
+      window.addEventListener('resize', set);
+      document.addEventListener('DOMContentLoaded', set);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Biinyu Studio, ir al inicio">
+        <img src="assets/img/logo.svg" alt="Biinyu Studio" width="195" height="72">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#que-hacemos">Qué hacemos</a></li>
+          <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#productos-propios">Productos propios</a></li>
+          <li><a href="#logros">Logros</a></li>
+          <li><a href="#el-estudio">El estudio</a></li>
+        </ul>
+        <a class="btn-pill nav__cta-mobile" href="#contacto" data-cta="hablemos-menu">Hablemos</a>
+        <div class="lang-switch lang-switch--menu" role="group" aria-label="Cambiar idioma">
+        <button type="button" data-lang="es" aria-pressed="true" class="is-active" lang="es" title="Español">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+      </div>
+      </nav>
+
+      <div class="lang-switch lang-switch--header" role="group" aria-label="Cambiar idioma">
+        <button type="button" data-lang="es" aria-pressed="true" class="is-active" lang="es" title="Español">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+      </div>
+
+      <a class="btn-pill" href="#contacto" data-cta="hablemos-header">
+        Hablemos
+        <svg class="btn-pill__icon" viewBox="1798 67.0734 18 18" aria-hidden="true">
+          <path d="M1799.88 76.0734C1799.88 72.7146 1799.88 71.0352 1800.92 69.9918C1801.960 68.9484 1803.64 68.9484 1807 68.9484C1810.36 68.9484 1812.04 68.9484 1813.08 69.9918C1814.12 71.0352 1814.12 72.7146 1814.12 76.0734C1814.12 79.4321 1814.12 81.1115 1813.08 82.1549C1812.04 83.1984 1810.36 83.1984 1807 83.1984C1803.64 83.1984 1801.96 83.1984 1800.92 82.1549C1799.88 81.1115 1799.88 79.4321 1799.88 76.0734Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M1814.12 77.1984H1810.43C1809.8 77.1984 1809.3 77.7261 1809.02 78.2838C1808.72 78.8897 1808.12 79.4484 1807 79.4484C1805.88 79.4484 1805.28 78.8897 1804.98 78.2838C1804.7 77.7261 1804.2 77.1984 1803.57 77.1984H1799.88" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ SECCIÓN 1 · HOME ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__stage">
+
+        <!-- Capa artística: fondo Cartagena, degradados, círculos y mascota (coordenadas exactas del diseño 1920×1080;
+             el lienzo se extiende a 1190 para dar aire antes de la transición de nubes) -->
+        <svg class="hero__art" viewBox="0 0 1920 1190" preserveAspectRatio="xMaxYMax slice" role="img"
+             aria-label="Mascota de Biinyu Studio, un camaleón en patineta, frente a la Torre del Reloj de Cartagena">
+          <defs>
+            <radialGradient id="g-radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1635 462) rotate(132.803) scale(1051.53 1265.96)">
+              <stop stop-color="#fff" stop-opacity="0"/>
+              <stop offset="1" stop-color="#fff"/>
+            </radialGradient>
+            <linearGradient id="g-top" x1="1426" y1="70" x2="1426" y2="307" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#fff"/>
+              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="g-left" x1="977.5" y1="332.5" x2="1384" y2="580" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#fff"/>
+              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="g-bottom" x1="960" y1="349" x2="960" y2="1274.71" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#fff" stop-opacity="0"/>
+              <stop offset="1" stop-color="#C6EAFF"/>
+            </linearGradient>
+            <linearGradient id="g-circle-lg" x1="1205.5" y1="1107" x2="1740" y2="816.5" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#76CAFF"/>
+              <stop offset="1" stop-color="#3CB4FF"/>
+            </linearGradient>
+            <linearGradient id="g-circle-sm" x1="1539.5" y1="911" x2="1913" y2="1429" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0072E8"/>
+              <stop offset="1" stop-color="#3CB4FF"/>
+            </linearGradient>
+          </defs>
+
+          <image href="assets/img/hero-bg.webp" x="812" y="70" width="1228" height="1020" preserveAspectRatio="none"/>
+          <rect x="812" y="70" width="1228" height="1020" fill="url(#g-radial)"/>
+          <rect x="812" y="70" width="1228" height="1020" fill="url(#g-top)"/>
+          <rect x="812" y="70" width="1228" height="1020" fill="url(#g-left)"/>
+          <rect class="hero__art-fade" y="349" width="1920" height="841" fill="url(#g-bottom)"/>
+          <circle cx="1869.5" cy="1585.5" r="915" fill="url(#g-circle-lg)" stroke="#1E1E1E" stroke-width="9"/>
+          <circle cx="1912.5" cy="1493.5" r="699.5" fill="url(#g-circle-sm)"/>
+          <image class="hero__mascot" href="assets/img/mascota.webp" x="1081" y="228" width="725" height="812" preserveAspectRatio="xMidYMid meet"/>
+        </svg>
+
+        <div class="hero__content">
+          <span class="hero__bar" aria-hidden="true"></span>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="line">Convertimos los retos de tu</span>
+            <span class="line">empresa en <span class="text-accent">experiencias</span></span>
+            <span class="line text-accent">interactivas que funcionan</span>
+          </h1>
+
+          <p class="hero__lead">
+            Partimos de tu propio reto, ya sea vender más, capacitar mejor, atender a tus clientes o mostrar lo que haces, y le damos la forma que mejor lo resuelve: una plataforma, una app, un videojuego o una experiencia inmersiva. Todo lo creamos con la imaginación y el cuidado de un videojuego, para que la gente se enganche y tu empresa vea el cambio.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contacto" data-cta="cuentanos-tu-reto">Cuéntanos tu reto</a>
+            <a class="btn btn--secondary" href="#como-trabajamos" data-cta="mira-como-trabajamos">Mira cómo trabajamos</a>
+          </div>
+
+          <ul class="stats" aria-label="Biinyu Studio en cifras">
+            <li class="stats__item">
+              <strong class="stats__value">10 años</strong>
+              <span class="stats__text"><b>Una década</b> creando e innovando desde Cartagena. <b>Origen: 2016</b></span>
+            </li>
+            <li class="stats__item">
+              <strong class="stats__value">11 distinciones</strong>
+              <span class="stats__text">Ganadas entre <b>convocatorias</b> y <b>premios</b> de innovación</span>
+            </li>
+            <li class="stats__item">
+              <strong class="stats__value">3 mercados</strong>
+              <span class="stats__text"><b>Internacionales</b> trabajados: EE.UU., Panamá, México</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRANSICIÓN 1 → 2 · la mascota surfea hacia las nubes ============ -->
+    <div class="cloud-divider" aria-hidden="true">
+      <svg viewBox="0 0 1920 220" preserveAspectRatio="xMidYMax slice">
+        <g class="cloud-divider__back" fill="#FFFFFF" fill-opacity=".9"><circle cx="-30" cy="224" r="71"/><circle cx="22" cy="220" r="69"/><circle cx="85" cy="224" r="67"/><circle cx="149" cy="219" r="70"/><circle cx="218" cy="219" r="73"/><circle cx="280" cy="223" r="69"/><circle cx="333" cy="224" r="72"/><circle cx="387" cy="225" r="67"/><circle cx="461" cy="219" r="67"/><circle cx="534" cy="219" r="68"/><circle cx="597" cy="222" r="73"/><circle cx="651" cy="227" r="76"/><circle cx="707" cy="221" r="72"/><circle cx="760" cy="224" r="74"/><circle cx="818" cy="225" r="67"/><circle cx="874" cy="227" r="75"/><circle cx="929" cy="223" r="72"/><circle cx="998" cy="222" r="75"/><circle cx="1053" cy="223" r="76"/><circle cx="1104" cy="231" r="80"/><circle cx="1169" cy="230" r="94"/><circle cx="1230" cy="216" r="92"/><circle cx="1300" cy="203" r="99"/><circle cx="1356" cy="193" r="99"/><circle cx="1409" cy="188" r="104"/><circle cx="1480" cy="206" r="127"/><circle cx="1551" cy="198" r="124"/><circle cx="1614" cy="174" r="104"/><circle cx="1673" cy="180" r="110"/><circle cx="1739" cy="194" r="125"/><circle cx="1813" cy="174" r="104"/><circle cx="1877" cy="183" r="116"/><circle cx="1951" cy="194" r="117"/></g>
+        <g class="cloud-divider__mid" fill="#EEF8FF"><circle cx="-60" cy="239" r="74"/><circle cx="23" cy="245" r="78"/><circle cx="83" cy="244" r="71"/><circle cx="162" cy="251" r="76"/><circle cx="228" cy="243" r="78"/><circle cx="289" cy="234" r="70"/><circle cx="364" cy="253" r="78"/><circle cx="427" cy="238" r="74"/><circle cx="495" cy="238" r="74"/><circle cx="565" cy="239" r="72"/><circle cx="647" cy="236" r="71"/><circle cx="706" cy="240" r="76"/><circle cx="778" cy="240" r="71"/><circle cx="849" cy="243" r="70"/><circle cx="922" cy="245" r="77"/><circle cx="1008" cy="252" r="80"/><circle cx="1075" cy="243" r="80"/><circle cx="1161" cy="237" r="82"/><circle cx="1225" cy="234" r="91"/><circle cx="1302" cy="233" r="101"/><circle cx="1378" cy="238" r="119"/><circle cx="1449" cy="221" r="105"/><circle cx="1528" cy="232" r="119"/><circle cx="1607" cy="233" r="119"/><circle cx="1693" cy="226" r="118"/><circle cx="1773" cy="242" r="128"/><circle cx="1848" cy="244" r="134"/><circle cx="1932" cy="220" r="118"/><rect x="-100" y="200" width="2120" height="40"/></g>
+        <defs><linearGradient id="cloud-to-services" gradientUnits="userSpaceOnUse" x1="309.5" y1="0" x2="2719" y2="0"><stop stop-color="#F8FDFF"/><stop offset="1" stop-color="#DFF3FF"/></linearGradient></defs>
+        <g class="cloud-divider__front" fill="url(#cloud-to-services)"><circle cx="-20" cy="270" r="80"/><circle cx="62" cy="274" r="82"/><circle cx="148" cy="273" r="79"/><circle cx="242" cy="262" r="76"/><circle cx="327" cy="274" r="84"/><circle cx="401" cy="265" r="81"/><circle cx="477" cy="265" r="80"/><circle cx="546" cy="272" r="84"/><circle cx="616" cy="262" r="79"/><circle cx="708" cy="269" r="77"/><circle cx="787" cy="273" r="83"/><circle cx="869" cy="266" r="83"/><circle cx="950" cy="273" r="80"/><circle cx="1038" cy="263" r="80"/><circle cx="1124" cy="270" r="86"/><circle cx="1210" cy="263" r="94"/><circle cx="1281" cy="272" r="107"/><circle cx="1369" cy="267" r="118"/><circle cx="1452" cy="255" r="109"/><circle cx="1521" cy="259" r="110"/><circle cx="1620" cy="255" r="108"/><circle cx="1698" cy="258" r="116"/><circle cx="1792" cy="262" r="120"/><circle cx="1882" cy="282" r="130"/><circle cx="1964" cy="281" r="131"/><rect x="-100" y="208" width="2120" height="40"/></g>
+      </svg>
+    </div>
+
+    <!-- ============ SECCIÓN 2 · QUÉ HACEMOS ============ -->
+    <section class="services" id="que-hacemos" aria-labelledby="services-title">
+      <div class="services__stage">
+        <span class="section-bar" aria-hidden="true"></span>
+
+        <h2 class="section-title" id="services-title">
+          <span class="line">No somos una casa de software.</span>
+          <span class="line text-accent">Somos un estudio creativo.</span>
+        </h2>
+
+        <p class="section-lead">
+          <em>Una casa de software espera a que le digas qué programar.</em><br>
+          Nosotros partimos de lo que te quita el sueño, y armamos el contenido interactivo que lo resuelve: una plataforma, una app, un videojuego o algo en realidad virtual. La forma la decide tu problema, no nosotros.
+        </p>
+
+        <img class="services__mascot reveal reveal--peek" style="--reveal-delay:.35s" src="assets/img/mascota-asomada.webp" alt="" width="574" height="506" loading="lazy" decoding="async">
+
+        <ul class="services__grid">
+          <li class="service-card service-card--web reveal">
+            <div class="service-card__head">
+              <img class="service-card__icon" src="assets/img/icon-web.webp" alt="" width="120" height="120" loading="lazy">
+              <div>
+                <p class="service-card__label">01 · Plataformas webs</p>
+                <h3 class="service-card__title">Tu operación ordenada en<br> un solo lugar</h3>
+              </div>
+            </div>
+            <p class="service-card__text">Si tu información vive repartida entre Excel, correos y la cabeza de una sola persona, construimos el lugar donde todo se junta: tu equipo encuentra lo que necesita sin preguntar, tus clientes hacen trámites sin llamarte, y tu web empieza a vender de verdad.</p>
+            <ul class="service-card__tags">
+              <li>Una web que vende</li>
+              <li>Atención a clientes en línea</li>
+              <li>Adiós al Excel eterno</li>
+            </ul>
+          </li>
+
+          <li class="service-card service-card--apps reveal" style="--reveal-delay:.08s">
+            <div class="service-card__head">
+              <img class="service-card__icon" src="assets/img/icon-app.webp" alt="" width="120" height="120" loading="lazy">
+              <div>
+                <p class="service-card__label">02 · Aplicaciones móviles</p>
+                <h3 class="service-card__title">Tu negocio en el bolsillo<br> de la gente</h3>
+              </div>
+            </div>
+            <p class="service-card__text">Apps para Android o iPhone pensadas para lo que pasa lejos de un escritorio: tu fuerza de ventas cierra negocios desde la calle, y tus clientes te encuentran sin hacer fila. Nos quedamos hasta que la app está publicada.</p>
+            <ul class="service-card__tags">
+              <li>Fuerza de ventas</li>
+              <li>Atención a clientes</li>
+              <li>Catálogo de servicios</li>
+            </ul>
+          </li>
+
+          <li class="service-card service-card--juegos reveal" style="--reveal-delay:.16s">
+            <div class="service-card__head">
+              <img class="service-card__icon" src="assets/img/icon-juegos.webp" alt="" width="120" height="120" loading="lazy">
+              <div>
+                <p class="service-card__label">03 · Videojuegos</p>
+                <h3 class="service-card__title">Juegos que enseñan, venden<br> y fidelizan</h3>
+              </div>
+            </div>
+            <p class="service-card__text">Un juego logra lo que una presentación no: que tu gente aprenda sin sentir que está estudiando, y que un cliente recuerde tu marca porque se divirtió con ella. Aquí empezamos hace diez años, y nuestros juegos ya llegaron a Estados Unidos, Panamá y México.</p>
+            <ul class="service-card__tags">
+              <li>Inducción de personal</li>
+              <li>Juegos de marca</li>
+              <li>Premios y fidelización</li>
+            </ul>
+          </li>
+
+          <li class="service-card service-card--inmersivo reveal" style="--reveal-delay:.24s">
+            <div class="service-card__head">
+              <img class="service-card__icon" src="assets/img/icon-inmersivo.webp" alt="" width="120" height="120" loading="lazy">
+              <div>
+                <p class="service-card__label">04 · Inmersivo</p>
+                <h3 class="service-card__title">Practicar lo que no se<br> puede ensayar</h3>
+              </div>
+            </div>
+            <p class="service-card__text">Con realidad virtual y aumentada resolvemos lo que pasa cuando el escenario real es caro, peligroso o imposible de repetir. Tu equipo entrena tareas críticas sin riesgo, tus clientes recorren tus instalaciones sin viajar, y en una feria la gente hace fila para probar tu marca.</p>
+            <ul class="service-card__tags">
+              <li>Productos que se ven en 3D</li>
+              <li>Recorridos virtuales</li>
+              <li>Experiencias para ferias</li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="services__more reveal">
+          <img class="services__runner" src="assets/img/mascota-corriendo.webp" alt="" width="474" height="456" loading="lazy" decoding="async">
+          <svg class="services__more-border" aria-hidden="true"><rect width="100%" height="100%" rx="24"/></svg>
+          <p class="services__more-text">Y como somos un estudio creativo, también contamos historias cuando el reto lo pide: contenidos multimedia y transmedia (animación 2D/3D, cómic, cortometraje), consultoría y formulación de proyectos TIC para convocatorias públicas, y formación in-company en gamificación y desarrollo de videojuegos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 3 · CÓMO TRABAJAMOS ============
+         Su borde superior es una ola que sube sobre la sección 2 (transición 2 → 3) -->
+    <section class="process" id="como-trabajamos" aria-labelledby="process-title" data-transition>
+      <svg class="process__bg" viewBox="0 -180 1920 1489" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="process-radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1083 662.757 -602 -1192.3 1560 271.929)">
+            <stop stop-color="#085293"/>
+            <stop offset="1" stop-color="#012B53"/>
+          </radialGradient>
+          <linearGradient id="process-wave-bl" x1="827.5" y1="805" x2="715.621" y2="1343.33" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0016" stop-color="#03396A"/>
+            <stop offset="1" stop-color="#074B87"/>
+          </linearGradient>
+          <linearGradient id="process-wave-tr" x1="1932.01" y1="-87.9414" x2="1863.59" y2="246.512" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0016" stop-color="#006AC8"/>
+            <stop offset="1" stop-color="#074B87"/>
+          </linearGradient>
+          <clipPath id="process-shape">
+            <path d="M-80 -28C140 -58 330 -14 540 -42S900 -112 1110 -96S1430 -150 1620 -140S1860 -168 2000 -158V1500H-80Z"/>
+          </clipPath>
+        </defs>
+        <!-- Olas de fondo que suben al hacer scroll -->
+        <path class="process__wave process__wave--back" fill="#3CB4FF" fill-opacity=".28"
+              d="M-80 -50C180 -64 400 -46 640 -92S1000 -166 1200 -150S1500 -182 1700 -176S1880 -180 2000 -178V260H-80Z"/>
+        <path class="process__wave process__wave--mid" fill="#0072E8" fill-opacity=".55"
+              d="M-80 -40C200 -60 380 -26 600 -66S960 -140 1160 -124S1470 -168 1660 -160S1870 -176 2000 -170V260H-80Z"/>
+        <!-- Fondo del diseño, recortado con la ola frontal -->
+        <g clip-path="url(#process-shape)">
+          <rect x="-10" y="-180" width="1940" height="1700" fill="url(#process-radial)"/>
+          <path d="M437.113 715.478C252.804 570.66 39.9089 578.485 -43.5 600.5V1420H1743.5V1188.5C1691 1097.5 1486.1 922.4 1086.5 950C587 984.5 667.5 896.5 437.113 715.478Z" fill="url(#process-wave-bl)"/>
+          <path d="M1482.14 31.6526C1438.38 -43.1609 1361.79 -50.3286 1328.96 -44.5607C1296 -64 1276 -150 1262 -260H2100V20C2062 46 2012 58 1959.14 77.3292C1810.46 132.981 1831.51 0.558154 1685.83 57.6374C1631.41 78.9609 1536.85 125.17 1482.14 31.6526Z" fill="url(#process-wave-tr)"/>
+        </g>
+      </svg>
+
+      <div class="process__stage">
+        <span class="section-bar" aria-hidden="true"></span>
+        <h2 class="section-title process__title" id="process-title">
+          Seis pasos y tres reglas <span class="text-accent">que jamás nos saltamos</span>
+        </h2>
+        <p class="process__lead">Así trabajamos con cada cliente: sin letra pequeña ni sustos a mitad de camino, sabiendo siempre en qué va tu proyecto.</p>
+
+        <!-- Recorrido: líneas, puntos y flechas del diseño (coordenadas 1920×1189) -->
+        <svg class="process__track" viewBox="0 0 1920 1189" aria-hidden="true" data-path>
+          <g class="track" data-step="1">
+            <path class="track__line" d="M224.5 366H722.5" pathLength="1"/>
+            <path class="track__arrow" d="M703.4 347.1L721.5 366L703.4 384.9"/>
+            <circle class="track__dot" cx="224.5" cy="366" r="16"/>
+          </g>
+          <g class="track" data-step="2">
+            <path class="track__line" d="M811 366H1308.5" pathLength="1"/>
+            <path class="track__arrow" d="M1289.4 347.1L1307.5 366L1289.4 384.9"/>
+            <circle class="track__dot" cx="811" cy="366" r="16"/>
+          </g>
+          <g class="track" data-step="3">
+            <path class="track__line" d="M1399.5 366H1757.5A103.5 103.5 0 0 1 1861 469.5V684.5A61 61 0 0 0 1922 745.5" pathLength="1"/>
+            <circle class="track__dot" cx="1399.5" cy="366" r="16"/>
+          </g>
+          <g class="track" data-step="4">
+            <path class="track__line" d="M-29 789H134" pathLength="1"/>
+            <path class="track__arrow" d="M114.4 770.1L132.5 789L114.4 807.9"/>
+          </g>
+          <g class="track" data-step="5">
+            <path class="track__line" d="M224.5 789H723" pathLength="1"/>
+            <path class="track__arrow" d="M703.9 770.1L722 789L703.9 807.9"/>
+            <circle class="track__dot" cx="224.5" cy="789" r="16"/>
+          </g>
+          <g class="track" data-step="6">
+            <path class="track__line" d="M811.5 789H1308.5" pathLength="1"/>
+            <path class="track__arrow" d="M1289.4 770.1L1307.5 789L1289.4 807.9"/>
+            <circle class="track__dot" cx="811.5" cy="789" r="16"/>
+          </g>
+        </svg>
+
+        <ol class="process__steps">
+          <li class="step reveal" data-step="1" data-at="184.2,366">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title">Brief y levantamiento</h3>
+            <p class="step__text">Entendemos tu objetivo de negocio<br class="br-d"> antes de hablar de tecnología, y lo<br class="br-d"> dejamos por escrito.</p>
+          </li>
+          <li class="step reveal" data-step="2" data-at="770.2,366" style="--reveal-delay:.08s">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title">Plan de trabajo</h3>
+            <p class="step__text">Alcance, cronograma y entregables por<br class="br-d"> escrito. No avanzamos sin que lo<br class="br-d"> apruebes.</p>
+            <p class="step__rule">No cotizamos sin plan de trabajo aprobado</p>
+          </li>
+          <li class="step reveal" data-step="3" data-at="1356.2,366" style="--reveal-delay:.16s">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title">Cotización y orden de compra</h3>
+            <p class="step__text">Precio cerrado sobre un alcance<br class="br-d"> cerrado. Tú emites la orden de compra<br class="br-d"> y nosotros la factura correspondiente.</p>
+            <p class="step__rule">No facturamos sin orden de compra</p>
+          </li>
+          <li class="step reveal" data-step="4" data-at="184.2,789">
+            <span class="step__num" aria-hidden="true">04</span>
+            <h3 class="step__title">Arranque</h3>
+            <p class="step__text">Con el anticipo confirmado entra<br class="br-d"> el equipo, y sabes desde el día<br class="br-d"> uno quién trabaja en tu proyecto.</p>
+            <p class="step__rule">No iniciamos desarrollo sin el primer pago</p>
+          </li>
+          <li class="step reveal" data-step="5" data-at="770.2,789" style="--reveal-delay:.08s">
+            <span class="step__num" aria-hidden="true">05</span>
+            <h3 class="step__title">Producción en Kanban</h3>
+            <p class="step__text">Flujo continuo, sin sprints artificiales,<br class="br-d"> con demo cada semana. Ves el<br class="br-d"> producto mientras se construye.</p>
+          </li>
+          <li class="step reveal" data-step="6" data-at="1356.2,789" style="--reveal-delay:.16s">
+            <span class="step__num" aria-hidden="true">06</span>
+            <h3 class="step__title">Entrega, garantía y medición</h3>
+            <p class="step__text">Capacitamos a tu equipo, dejamos la<br class="br-d"> garantía por escrito y medimos el<br class="br-d"> resultado contra el objetivo inicial.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 4 · CLIENTES ============
+         Sube sobre la sección 3 con una ola clara (transición 3 → 4) -->
+    <section class="clients" id="clientes" aria-labelledby="clients-title" data-transition>
+      <svg class="clients__bg" viewBox="0 -180 1920 1560" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="clients-bg" x1="309.5" y1="0" x2="1460" y2="1204" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F8FDFF"/>
+            <stop offset="1" stop-color="#DFF3FF"/>
+          </linearGradient>
+          <linearGradient id="clients-wave" x1="1858.5" y1="963" x2="1577.16" y2="1607.24" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3CB4FF"/>
+            <stop offset="0.4808" stop-color="#93D5FF"/>
+            <stop offset="0.9712" stop-color="#C9ECFF"/>
+          </linearGradient>
+          <clipPath id="clients-shape">
+            <path d="M-80 -62C190 -92 410 -44 640 -82S1000 -150 1220 -132S1520 -170 1720 -160S1880 -174 2000 -170V1500H-80Z"/>
+          </clipPath>
+        </defs>
+        <!-- Olas claras ("espuma") que suben al hacer scroll -->
+        <path class="edge-wave edge-wave--back" fill="#3CB4FF" fill-opacity=".45"
+              d="M-80 -86C200 -104 430 -70 660 -110S1020 -172 1240 -158S1540 -180 1740 -178S1890 -180 2000 -179V200H-80Z"/>
+        <path class="edge-wave edge-wave--mid" fill="#9BDCFD" fill-opacity=".7"
+              d="M-80 -74C200 -100 420 -56 650 -96S1010 -162 1230 -145S1530 -176 1730 -170S1885 -178 2000 -175V200H-80Z"/>
+        <g clip-path="url(#clients-shape)">
+          <rect x="-10" y="-180" width="1940" height="1700" fill="url(#clients-bg)"/>
+          <path d="M1393 1035C1530.5 873.5 1670.5 767.5 1947 816.5L1965 1500H-44.5V870.5C155 811 221.784 1049.89 422.857 1049.89C557 1049.89 609.5 971.5 809 982.5C1030.5 994.714 1216.67 1242.11 1393 1035Z" fill="url(#clients-wave)"/>
+        </g>
+      </svg>
+
+      <div class="clients__stage">
+        <span class="section-bar" aria-hidden="true"></span>
+        <h2 class="section-title clients__title" id="clients-title">
+          Empresas que ya nos <span class="text-accent">dijeron que sí</span>
+        </h2>
+        <p class="clients__lead">Industria pesada, petroquímica, logística, banca, universidades y gremios: todos llegaron con la misma pregunta que probablemente te trajo aquí.</p>
+
+        <ul class="clients__grid">
+          <li class="client-card reveal" style="--w:496; --lw:92">
+            <img class="client-card__logo" src="assets/img/clientes/logo-cotecmar.webp" alt="Logo de COTECMAR" width="92" height="92" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">COTECMAR</h3>
+              <p class="client-card__tag">Ciencia y tecnología naval</p>
+            </div>
+          </li>
+          <li class="client-card reveal" style="--w:449; --lw:152; --reveal-delay:.06s">
+            <img class="client-card__logo" src="assets/img/clientes/logo-esenttia.webp" alt="Logo de Esenttia" width="152" height="91" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">Esenttia</h3>
+              <p class="client-card__tag">Petroquímica</p>
+            </div>
+          </li>
+          <li class="client-card reveal" style="--w:659; --lw:161; --name:24; --reveal-delay:.12s">
+            <img class="client-card__logo" src="assets/img/clientes/logo-zona-franca-parque-central.webp" alt="Logo de Zona Franca Parque Central" width="161" height="92" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">Zona Franca Parque Central</h3>
+              <p class="client-card__tag">Zona franca industrial</p>
+            </div>
+          </li>
+          <li class="client-card reveal" style="--w:532; --lw:92">
+            <img class="client-card__logo" src="assets/img/clientes/logo-fonrecar.webp" alt="Logo de Fonrecar" width="92" height="92" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">Fonrecar</h3>
+              <p class="client-card__tag">Sector financiero y cooperativo</p>
+            </div>
+          </li>
+          <li class="client-card reveal" style="--w:375; --lw:115; --reveal-delay:.06s">
+            <img class="client-card__logo" src="assets/img/clientes/logo-4pl.webp" alt="Logo de 4PL SIL" width="115" height="92" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">4PL</h3>
+              <p class="client-card__tag">Logística</p>
+            </div>
+          </li>
+          <li class="client-card reveal" style="--w:700; --lw:97; --name:24; --reveal-delay:.12s">
+            <img class="client-card__logo" src="assets/img/clientes/logo-camara-comercio-cartagena.webp" alt="Logo de la Cámara de Comercio de Cartagena" width="97" height="92" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">Cámara de Comercio de Cartagena</h3>
+              <p class="client-card__tag">Gremio empresarial</p>
+            </div>
+          </li>
+          <li class="client-card reveal" style="--w:353; --lw:92">
+            <img class="client-card__logo" src="assets/img/clientes/logo-codesa.webp" alt="Logo de Codesa" width="92" height="92" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">Codesa</h3>
+              <p class="client-card__tag">Industria</p>
+            </div>
+          </li>
+          <li class="client-card reveal" style="--w:557; --lw:115; --reveal-delay:.06s">
+            <img class="client-card__logo" src="assets/img/clientes/logo-universidad-del-sinu.webp" alt="Logo de la Universidad del Sinú" width="115" height="92" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">Universidad del Sinú</h3>
+              <p class="client-card__tag">Educación superior</p>
+            </div>
+          </li>
+          <li class="client-card reveal" style="--w:593; --lw:143; --reveal-delay:.12s">
+            <img class="client-card__logo" src="assets/img/clientes/logo-gematours.webp" alt="Logo de GemaTours" width="143" height="92" loading="lazy">
+            <div class="client-card__info">
+              <h3 class="client-card__name">Gematours</h3>
+              <p class="client-card__tag">Turismo y operación</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- La mascota corredora regresa, ahora entrando por la derecha -->
+        <img class="clients__runner reveal reveal--run" style="--reveal-delay:.3s" src="assets/img/mascota-corriendo.webp" alt="" width="474" height="456" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 5 · PRODUCTOS PROPIOS ============
+         Sube sobre la sección 4 con una ola (transición 4 → 5) -->
+    <section class="products" id="productos-propios" aria-labelledby="products-title" data-transition>
+      <svg class="products__bg" viewBox="0 -180 1920 2610" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="products-bg" x1="309.5" y1="0" x2="2240.46" y2="962.263" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F8FDFF"/>
+            <stop offset="1" stop-color="#DFF3FF"/>
+          </linearGradient>
+          <linearGradient id="products-wave" x1="-419" y1="2212.26" x2="41.5666" y2="1310.39" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0016" stop-color="#9BDCFD"/>
+            <stop offset="0.5729" stop-color="#CAECFF"/>
+          </linearGradient>
+          <clipPath id="products-shape">
+            <path d="M-80 -28C140 -58 330 -14 540 -42S900 -112 1110 -96S1430 -150 1620 -140S1860 -168 2000 -158V2600H-80Z"/>
+          </clipPath>
+        </defs>
+        <!-- Mismas olas que la transición 2 → 3 -->
+        <path class="edge-wave edge-wave--back" fill="#3CB4FF" fill-opacity=".28"
+              d="M-80 -50C180 -64 400 -46 640 -92S1000 -166 1200 -150S1500 -182 1700 -176S1880 -180 2000 -178V300H-80Z"/>
+        <path class="edge-wave edge-wave--mid" fill="#0072E8" fill-opacity=".55"
+              d="M-80 -40C200 -60 380 -26 600 -66S960 -140 1160 -124S1470 -168 1660 -160S1870 -176 2000 -170V300H-80Z"/>
+        <g clip-path="url(#products-shape)">
+          <rect x="-10" y="-180" width="1940" height="2800" fill="url(#products-bg)"/>
+          <path d="M437.113 1795.24C252.804 1650.42 39.9089 1658.24 -43.5 1680.26V2460H1743.5V2268.26C1691 2177.26 1486.1 2002.16 1086.5 2029.76C587 2064.26 667.5 1976.26 437.113 1795.24Z" fill="url(#products-wave)"/>
+        </g>
+      </svg>
+
+      <div class="products__stage">
+        <span class="section-bar" aria-hidden="true"></span>
+        <h2 class="section-title" id="products-title">
+          <span class="line">Lo que construimos cuando</span>
+          <span class="line text-accent">el cliente somos nosotros</span>
+        </h2>
+        <p class="section-lead products__lead">Estos cuatro proyectos los hicimos por cuenta propia, con nuestro presupuesto y nuestro riesgo.<br class="br-d"> Mantenerlos y responder por ellos durante años nos enseña cosas que un encargo no.</p>
+
+        <img class="products__mascot reveal reveal--peek" style="--reveal-delay:.35s" src="assets/img/mascota-gamer.webp" alt="" width="448" height="439" loading="lazy" decoding="async">
+
+        <ul class="products__grid">
+          <li class="product-card reveal">
+            <div class="product-card__media">
+              <img src="assets/img/productos/producto-oyyo.webp" alt="OYYO, videojuego de puzzles con un gran reloj y engranajes" width="840" height="446" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">OYYO</h3>
+              <p class="product-card__type">Videojuego de puzzles</p>
+              <p class="product-card__text">Un juego de puzzles donde el tiempo se rebobina. Oyyo y Ayya custodian el Gran Reloj, y cuando uno cae el otro devuelve el tiempo para darle otra oportunidad. Historia, arte, animación y código, todo hecho en casa.</p>
+              <div class="product-card__footer">
+                <ul class="product-card__tags">
+                  <li>Narrativa</li>
+                  <li>Niveles</li>
+                  <li>Arte y animación</li>
+                </ul>
+                <a class="product-cta" href="#contacto" data-cta="producto-oyyo" aria-label="Conoce más sobre OYYO">
+                  Conoce más
+                  <span class="product-cta__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 12H19.2M13.5 6.2l5.4 5.4c.4.4.4.4 0 .8l-5.4 5.4"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="product-card reveal" style="--reveal-delay:.1s">
+            <div class="product-card__media">
+              <img src="assets/img/productos/producto-safe.webp" alt="SAFE, plataforma de gestión documental en un portátil" width="840" height="446" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">SAFE</h3>
+              <p class="product-card__type">Plataforma de gestión documental</p>
+              <p class="product-card__text">Centraliza los documentos de tu organización, controla versiones y deja rastro de quién hizo qué. Para equipos que hoy dependen de una carpeta compartida y de la memoria de alguien.</p>
+              <div class="product-card__footer">
+                <ul class="product-card__tags">
+                  <li>Plataforma web</li>
+                  <li>Control de versiones</li>
+                  <li>Trazabilidad</li>
+                </ul>
+                <a class="product-cta" href="#contacto" data-cta="producto-safe" aria-label="Conoce más sobre SAFE">
+                  Conoce más
+                  <span class="product-cta__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 12H19.2M13.5 6.2l5.4 5.4c.4.4.4.4 0 .8l-5.4 5.4"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="product-card reveal">
+            <div class="product-card__media">
+              <img src="assets/img/productos/producto-arrecife.webp" alt="ARRECIFE, plataforma de gestión de proyectos en un portátil" width="840" height="446" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">ARRECIFE</h3>
+              <p class="product-card__type">Plataforma de gestión de proyectos</p>
+              <p class="product-card__text">Tableros, responsables, tiempos y estado de cada entrega en un mismo lugar. Para equipos que trabajan por proyectos y necesitan saber, sin tener que preguntar, qué va bien y qué se está atrasando.</p>
+              <div class="product-card__footer">
+                <ul class="product-card__tags">
+                  <li>Tableros y flujos</li>
+                  <li>Seguimiento de entregas</li>
+                  <li>Reportes</li>
+                </ul>
+                <a class="product-cta" href="#contacto" data-cta="producto-arrecife" aria-label="Conoce más sobre ARRECIFE">
+                  Conoce más
+                  <span class="product-cta__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 12H19.2M13.5 6.2l5.4 5.4c.4.4.4.4 0 .8l-5.4 5.4"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="product-card reveal" style="--reveal-delay:.1s">
+            <div class="product-card__media">
+              <img src="assets/img/productos/producto-entre-cuentos.webp" alt="Entre Cuentos, videojuego con dos personajes en un bosque mágico" width="840" height="446" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">ENTRE CUENTOS</h3>
+              <p class="product-card__type">Videojuego</p>
+              <p class="product-card__text">Ganador de Crea Digital 2019, la convocatoria del Ministerio TIC y el Ministerio de Cultura para contenidos digitales. Se produjo con estándares de convocatoria pública y sustentado ante un jurado nacional.</p>
+              <div class="product-card__footer">
+                <ul class="product-card__tags">
+                  <li>Videojuego</li>
+                  <li>Contenido cultural</li>
+                  <li>Crea Digital 2019</li>
+                </ul>
+                <a class="product-cta" href="#contacto" data-cta="producto-entre-cuentos" aria-label="Conoce más sobre Entre Cuentos">
+                  Conoce más
+                  <span class="product-cta__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 12H19.2M13.5 6.2l5.4 5.4c.4.4.4.4 0 .8l-5.4 5.4"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 6 · LOGROS ============
+         Sube sobre la sección 5 con una ola oscura (transición 5 → 6).
+         La línea de tiempo se dibuja al hacer scroll, como el recorrido de la sección 3 -->
+    <section class="achievements" id="logros" aria-labelledby="achievements-title" data-transition>
+      <svg class="achievements__bg" viewBox="0 -180 1920 1700" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="achv-radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1083 788.174 -602 -1417.93 1560 323.387)">
+            <stop stop-color="#085293"/>
+            <stop offset="1" stop-color="#012B53"/>
+          </radialGradient>
+          <linearGradient id="achv-wave-bl" x1="827.5" y1="1152.76" x2="715.621" y2="1691.09" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0016" stop-color="#03396A"/>
+            <stop offset="1" stop-color="#074B87"/>
+          </linearGradient>
+          <linearGradient id="achv-wave-tr" x1="1932.01" y1="-87.9414" x2="1863.59" y2="246.512" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0016" stop-color="#006AC8"/>
+            <stop offset="1" stop-color="#074B87"/>
+          </linearGradient>
+          <clipPath id="achv-shape">
+            <path d="M-80 -40C170 -70 360 -24 570 -52S930 -118 1140 -104S1450 -150 1640 -142S1865 -166 2000 -158V1700H-80Z"/>
+          </clipPath>
+        </defs>
+        <path class="edge-wave edge-wave--back" fill="#3CB4FF" fill-opacity=".28"
+              d="M-80 -62C200 -76 420 -56 660 -100S1020 -170 1220 -154S1520 -184 1720 -178S1885 -181 2000 -179V260H-80Z"/>
+        <path class="edge-wave edge-wave--mid" fill="#0072E8" fill-opacity=".55"
+              d="M-80 -52C210 -72 400 -36 620 -76S980 -146 1180 -130S1490 -172 1680 -164S1875 -178 2000 -172V260H-80Z"/>
+        <g clip-path="url(#achv-shape)">
+          <rect x="-80" y="-180" width="2080" height="1900" fill="url(#achv-radial)"/>
+          <path d="M437.113 1063.24C252.804 918.419 39.9089 926.244 -43.5 948.258V1700H1743.5V1536.26C1691 1445.26 1486.1 1270.16 1086.5 1297.76C587 1332.26 667.5 1244.26 437.113 1063.24Z" fill="url(#achv-wave-bl)"/>
+          <path d="M1482.14 31.6526C1438.38 -43.1609 1361.79 -50.3286 1328.96 -44.5607C1296 -64 1276 -150 1262 -260H2100V20C2062 46 2012 58 1959.14 77.3292C1810.46 132.981 1831.51 0.558154 1685.83 57.6374C1631.41 78.9609 1536.85 125.17 1482.14 31.6526Z" fill="url(#achv-wave-tr)"/>
+        </g>
+      </svg>
+
+      <div class="achievements__stage">
+        <header class="achievements__head">
+          <div>
+            <span class="section-bar" aria-hidden="true"></span>
+            <h2 class="section-title achievements__title" id="achievements-title">
+              <span class="line">Una década compitiendo por</span>
+              <span class="line text-accent">convocatorias y ganándolas</span>
+            </h2>
+          </div>
+          <p class="achievements__lead">Nadie se elige solo para estas cosas. Aquí están, en orden,<br class="br-d"> las convocatorias y los premios que hemos ganado.</p>
+        </header>
+
+        <!-- Línea de tiempo: tramos y puntos del diseño (coordenadas 1920×1414) -->
+        <svg class="achievements__track" viewBox="0 0 1920 1414" aria-hidden="true" data-path>
+          <g class="track"><path class="track__line" d="M175 390H658" pathLength="1"/><circle class="track__dot" cx="175" cy="390" r="16"/><circle class="track__dot" cx="658" cy="390" r="16"/></g>
+          <g class="track"><path class="track__line" d="M728.5 390H1782.5C1826.68 390 1862.5 425.817 1862.5 470V543C1862.5 580.279 1892.72 610.5 1930 610.5" pathLength="1"/></g>
+          <g class="track"><path class="track__line" d="M-37 719H571.5" pathLength="1"/><circle class="track__dot" cx="571.5" cy="719" r="16"/></g>
+          <g class="track"><path class="track__line" d="M639 719H1495.5" pathLength="1"/><circle class="track__dot" cx="639" cy="719" r="16"/><circle class="track__dot" cx="1495.5" cy="719" r="16"/></g>
+          <g class="track"><path class="track__line" d="M1553 719H1782.5C1826.68 719 1862.5 754.817 1862.5 799V872C1862.5 909.279 1892.72 939.5 1930 939.5" pathLength="1"/></g>
+          <g class="track"><path class="track__line" d="M-35 1052H531" pathLength="1"/><circle class="track__dot" cx="531" cy="1052" r="16"/></g>
+          <g class="track"><path class="track__line" d="M602 1052H960" pathLength="1"/><circle class="track__dot" cx="602" cy="1052" r="16"/><circle class="track__dot" cx="960" cy="1052" r="16"/></g>
+          <g class="track"><path class="track__line" d="M1034 1052H1416" pathLength="1"/><circle class="track__dot" cx="1034" cy="1052" r="16"/><circle class="track__dot" cx="1416" cy="1052" r="16"/></g>
+        </svg>
+
+        <ol class="milestones">
+          <li class="milestone" data-at="138.5,390" style="--x:101; --y:367; --pw:75">
+            <span class="milestone__year">2015</span>
+            <h3 class="milestone__title">Laboratorio C3+D,<br class="br-d"> Ministerio de Cultura</h3>
+            <p class="milestone__text">El punto de partida: el equipo fundador fue<br class="br-d"> seleccionado en la fase de Descubrimiento de<br class="br-d"> Negocios, antes de constituir el estudio.</p>
+          </li>
+          <li class="milestone" data-at="696,390" style="--x:658.667; --y:367; --pw:75">
+            <span class="milestone__year">2016</span>
+            <h3 class="milestone__title">Laboratorio C3+D,<br class="br-d"> Ministerio de Cultura</h3>
+            <p class="milestone__text">Seleccionados para la fase de<br class="br-d"> Puesta en Marcha (aceleración).</p>
+          </li>
+          <li class="milestone" data-at="1127,390" style="--x:1089.33; --y:367; --pw:75">
+            <span class="milestone__year">2016</span>
+            <h3 class="milestone__title">Apps.co, MinTIC</h3>
+            <p class="milestone__text">NeoComic App, emprendimiento<br class="br-d"> destacado, con invitación al<br class="br-d"> Business Day de Colombia 4.0.</p>
+          </li>
+          <li class="milestone" data-at="1558.5,390" style="--x:1521; --y:367; --pw:75">
+            <span class="milestone__year">2016</span>
+            <h3 class="milestone__title">Beca de Circulación I,<br class="br-d"> Ministerio de Cultura</h3>
+            <p class="milestone__text">NeoComic App, ganador de la<br class="br-d"> Beca de Circulación Nacional e<br class="br-d"> Internacional.</p>
+          </li>
+          <li class="milestone" data-at="138.5,719" style="--x:101; --y:696; --pw:75">
+            <span class="milestone__year">2016</span>
+            <h3 class="milestone__title">Premio a la Innovación<br class="br-d"> en Bolívar, Cámara de<br class="br-d"> Comercio de Cartagena</h3>
+            <p class="milestone__text">Ganadores en la categoría<br class="br-d"> Innovación Naranja.</p>
+          </li>
+          <li class="milestone" data-at="606,719" style="--x:569.667; --y:696; --pw:73">
+            <span class="milestone__year">2017</span>
+            <h3 class="milestone__title">Cartagena Open Future,<br class="br-d"> Cámara de Comercio de<br class="br-d"> Cartagena</h3>
+            <p class="milestone__text">Ganadores de la convocatoria.</p>
+          </li>
+          <li class="milestone" data-at="1085.8,719" style="--x:1049.33; --y:696; --pw:73">
+            <span class="milestone__year">2017</span>
+            <h3 class="milestone__title">Beca de Circulación II,<br class="br-d"> Ministerio de Cultura</h3>
+            <p class="milestone__text">Segundo ciclo de circulación<br class="br-d"> nacional e internacional.</p>
+          </li>
+          <li class="milestone" data-at="1531.5,719" style="--x:1494; --y:696; --pw:75">
+            <span class="milestone__year">2018</span>
+            <h3 class="milestone__title">Los + Pro, ProColombia</h3>
+            <p class="milestone__text">Finalistas del primer reality de<br class="br-d"> exportación del país.</p>
+          </li>
+          <li class="milestone" data-at="138.5,1052" style="--x:101; --y:1029; --pw:75">
+            <span class="milestone__year">2018</span>
+            <h3 class="milestone__title">Premio a la Innovación<br class="br-d"> en Bolívar, Cámara de<br class="br-d"> Comercio de Cartagena</h3>
+            <p class="milestone__text">Segundo reconocimiento en<br class="br-d"> Innovación Naranja.</p>
+          </li>
+          <li class="milestone" data-at="567,1052" style="--x:530; --y:1029; --pw:74">
+            <span class="milestone__year">2019</span>
+            <h3 class="milestone__title">Crea Digital, Ministerio<br class="br-d"> TIC y Ministerio de<br class="br-d"> Cultura</h3>
+            <p class="milestone__text">Entre Cuentos, videojuego<br class="br-d"> ganador de la convocatoria.</p>
+          </li>
+          <li class="milestone" data-at="998.5,1052" style="--x:959; --y:1029; --pw:79">
+            <span class="milestone__year">2020</span>
+            <h3 class="milestone__title">Transformación Digital<br class="br-d"> Naranja, MinTIC e iNNpulsa</h3>
+            <p class="milestone__text">Seleccionados en el programa 2020 y<br class="br-d"> 2021.</p>
+          </li>
+          <li class="milestone" data-at="1463.5,1052" style="--x:1416; --y:1029; --pw:95">
+            <span class="milestone__year">Global</span>
+            <h3 class="milestone__title">Devcom (Colonia) y Tokyo<br class="br-d"> Game Show</h3>
+            <p class="milestone__text">Presencia del estudio en los dos escenarios<br class="br-d"> donde se define la industria del videojuego.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 7 · EL ESTUDIO ============
+         Sección clara que sube sobre la 6 con las mismas olas de las demás transiciones -->
+    <section class="studio" id="el-estudio" aria-labelledby="studio-title" data-transition>
+      <svg class="studio__bg" viewBox="0 -180 1920 1260" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="studio-bg" x1="1319.5" y1="0" x2="1633.5" y2="1043" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F8FDFF"/>
+            <stop offset="1" stop-color="#A0D6F6"/>
+          </linearGradient>
+          <clipPath id="studio-shape">
+            <path d="M-80 -28C140 -58 330 -14 540 -42S900 -112 1110 -96S1430 -150 1620 -140S1860 -168 2000 -158V1300H-80Z"/>
+          </clipPath>
+        </defs>
+        <path class="edge-wave edge-wave--back" fill="#3CB4FF" fill-opacity=".28"
+              d="M-80 -50C180 -64 400 -46 640 -92S1000 -166 1200 -150S1500 -182 1700 -176S1880 -180 2000 -178V300H-80Z"/>
+        <path class="edge-wave edge-wave--mid" fill="#0072E8" fill-opacity=".55"
+              d="M-80 -40C200 -60 380 -26 600 -66S960 -140 1160 -124S1470 -168 1660 -160S1870 -176 2000 -170V300H-80Z"/>
+        <g clip-path="url(#studio-shape)">
+          <rect x="-80" y="-180" width="2080" height="1480" fill="url(#studio-bg)"/>
+          <!-- Textura de Cartagena en modo overlay, como en el diseño -->
+          <image href="assets/img/cartagena-textura.webp" x="-517" y="-11" width="2442" height="1303" preserveAspectRatio="none" style="mix-blend-mode:overlay"/>
+        </g>
+      </svg>
+
+      <div class="studio__stage">
+        <span class="section-bar" aria-hidden="true"></span>
+        <h2 class="section-title" id="studio-title">
+          <span class="line">Nos fundó un grupo de universitarios</span>
+          <span class="line text-accent">que querían hacer videojuegos</span>
+        </h2>
+        <div class="studio__text">
+          <p>Eso fue en 2016, en Cartagena de Indias. Diez años después seguimos siendo eso:<br class="br-d"> gente que ilustra, anima, escribe, diseña y programa en la misma mesa. La misma<br class="br-d"> persona que te escucha en la primera reunión es la que crea tu solución.</p>
+          <p>Con los años llevamos lo aprendido haciendo videojuegos a plataformas, apps y<br class="br-d"> experiencias para empresas. Juntamos la solidez de un software que aguanta la<br class="br-d"> operación diaria con el poder de un videojuego para enganchar de verdad, y esa<br class="br-d"> combinación no abunda.</p>
+        </div>
+
+        <img class="studio__mascot reveal reveal--peek" style="--reveal-delay:.3s" src="assets/img/mascota-saltando.webp" alt="" width="510" height="550" loading="lazy" decoding="async">
+
+        <div class="studio__card reveal">
+          <div class="studio__col">
+            <h3 class="studio__col-title">Nuestro propósito</h3>
+            <p>Que la tecnología de nuestros clientes deje de ser un trámite<br class="br-d"> y se convierta en algo que sus usuarios quieran abrir.</p>
+          </div>
+          <div class="studio__col">
+            <h3 class="studio__col-title">¿Cómo lo medimos?</h3>
+            <p>Cuánta gente lo usa, cuánto tiempo lo usa y qué cambió en el negocio seis<br class="br-d"> meses después. No por entregables cerrados ni por horas facturadas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN 8 · HABLEMOS (CONTACTO) ============
+         Sección oscura que sube sobre la 7 (transición 7 → 8) -->
+    <section class="contact" id="contacto" aria-labelledby="contact-title" data-transition>
+      <svg class="contact__bg" viewBox="0 -180 1920 1583" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="contact-radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1083 704.005 -602 -1266.51 1560 288.853)">
+            <stop stop-color="#085293"/>
+            <stop offset="1" stop-color="#012B53"/>
+          </radialGradient>
+          <linearGradient id="contact-wave-l" x1="-214" y1="676.5" x2="116.79" y2="392.182" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0016" stop-color="#03396A"/>
+            <stop offset="1" stop-color="#074B87"/>
+          </linearGradient>
+          <linearGradient id="contact-wave-tr" x1="1932.01" y1="-87.9414" x2="1863.59" y2="246.512" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0016" stop-color="#006AC8"/>
+            <stop offset="1" stop-color="#074B87"/>
+          </linearGradient>
+          <linearGradient id="contact-wave-b" x1="382.952" y1="906.85" x2="361.09" y2="1412.24" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0016" stop-color="#006AC8"/>
+            <stop offset="1" stop-color="#074B87"/>
+          </linearGradient>
+          <clipPath id="contact-shape">
+            <path d="M-80 -28C140 -58 330 -14 540 -42S900 -112 1110 -96S1430 -150 1620 -140S1860 -168 2000 -158V1480H-80Z"/>
+          </clipPath>
+        </defs>
+        <path class="edge-wave edge-wave--back" fill="#3CB4FF" fill-opacity=".28"
+              d="M-80 -50C180 -64 400 -46 640 -92S1000 -166 1200 -150S1500 -182 1700 -176S1880 -180 2000 -178V300H-80Z"/>
+        <path class="edge-wave edge-wave--mid" fill="#0072E8" fill-opacity=".55"
+              d="M-80 -40C200 -60 380 -26 600 -66S960 -140 1160 -124S1470 -168 1660 -160S1870 -176 2000 -170V300H-80Z"/>
+        <g clip-path="url(#contact-shape)">
+          <rect x="-80" y="-180" width="2080" height="1660" fill="url(#contact-radial)"/>
+          <image href="assets/img/cartagena-textura.webp" x="-517" y="-13" width="2442" height="1303" preserveAspectRatio="none" opacity=".2" style="mix-blend-mode:overlay"/>
+          <path d="M437.113 715.478C252.804 570.661 39.9089 578.486 -43.5 600.5V1188.5H1743.5C1691 1097.5 1486.1 922.4 1086.5 950C587 984.5 667.5 896.5 437.113 715.478Z" fill="url(#contact-wave-l)"/>
+          <path d="M1482.14 31.6526C1438.38 -43.1609 1361.79 -50.3286 1328.96 -44.5607C1296 -64 1276 -150 1262 -260H2100V20C2062 46 2012 58 1959.14 77.3292C1810.46 132.981 1831.51 0.558154 1685.83 57.6374C1631.41 78.9609 1536.85 125.17 1482.14 31.6526Z" fill="url(#contact-wave-tr)"/>
+          <path d="M518 1015.55C380.5 854.044 240.5 748.044 -36 797.044V1480H1955.5V851.044C1756 791.544 1689.22 1030.43 1488.14 1030.43C1354 1030.43 1301.5 952.044 1102 963.044C880.496 975.258 694.328 1222.65 518 1015.55Z" fill="url(#contact-wave-b)"/>
+        </g>
+      </svg>
+
+      <div class="contact__stage">
+        <span class="section-bar" aria-hidden="true"></span>
+        <h2 class="section-title contact__title" id="contact-title">
+          <span class="line">Cuéntanos qué quieres lograr.</span>
+          <span class="line text-accent">Nosotros creamos cómo lograrlo.</span>
+        </h2>
+        <p class="section-lead contact__lead">Cuéntanos tu problema y nosotros creamos la solución. En pocos días tienes un plan con alcance,<br class="br-d"> entregables y fecha, sin compromiso y sin costo. Diez años convirtiendo retos en soluciones que<br class="br-d"> funcionan, y el tuyo no será la excepción.</p>
+
+        <img class="contact__mascot contact__mascot--laptop reveal reveal--peek" style="--reveal-delay:.25s" src="assets/img/mascota-laptop.webp" alt="" width="497" height="532" loading="lazy" decoding="async">
+        <img class="contact__mascot contact__mascot--puff reveal reveal--peek" style="--reveal-delay:.35s" src="assets/img/mascota-puff.webp" alt="" width="509" height="681" loading="lazy" decoding="async">
+
+        <ul class="contact__cards">
+          <li class="contact-card reveal" style="--cx:83; --cy:457; --cw:428; --ch:221">
+            <div class="contact-card__row" style="--bw:375">
+              <a class="contact-btn" href="https://wa.me/573214419852?text=Hola%20Biinyu%2C%20quiero%20contarles%20mi%20reto" target="_blank" rel="noopener" data-cta="contacto-whatsapp">
+                <span class="contact-btn__label">+57 3214419852</span>
+              </a>
+              <button class="contact-btn__icon" type="button" data-copy="+57 3214419852" aria-label="Copiar número de teléfono">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6.5A2.5 2.5 0 0 0 13.5 4h-7A2.5 2.5 0 0 0 4 6.5v7A2.5 2.5 0 0 0 6.5 16H8"/></svg>
+              </button>
+            </div>
+            <span class="contact-btn__toast" role="status">¡Número copiado!</span>
+            <p class="contact-card__caption">Llámanos o escríbenos<br> por WhatsApp</p>
+          </li>
+          <li class="contact-card reveal" style="--cx:571; --cy:457; --cw:570; --ch:221; --reveal-delay:.1s">
+            <div class="contact-card__row" style="--bw:517">
+              <a class="contact-btn" href="mailto:admin@biinyu.com.co?subject=Quiero%20contarles%20mi%20reto" data-cta="contacto-email">
+                <span class="contact-btn__label">admin@biinyu.com.co</span>
+              </a>
+              <span class="contact-btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="3.5"/><path d="M7 9.5l3.8 2.3c.8.5 1.6.5 2.4 0L17 9.5"/></svg>
+              </span>
+            </div>
+            <p class="contact-card__caption contact-card__caption--one">Cuéntanos tu idea o proyecto</p>
+          </li>
+          <li class="contact-card reveal" style="--cx:1201; --cy:457; --cw:465; --ch:221; --reveal-delay:.2s">
+            <div class="contact-card__row" style="--bw:412">
+              <a class="contact-btn" href="https://www.biinyu.com" target="_blank" rel="noopener" data-cta="contacto-web">
+                <span class="contact-btn__label">www.biinyu.com</span>
+              </a>
+              <span class="contact-btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="3.6" ry="9"/><path d="M3 12h18"/></svg>
+              </span>
+            </div>
+            <p class="contact-card__caption">Conoce más sobre nosotros<br> y nuestros servicios</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============
+       Sube sobre la sección 8 con una ola suave, en el azul más profundo de la marca -->
+  <footer class="site-footer">
+    <svg class="site-footer__wave" viewBox="0 0 1920 90" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#3CB4FF" fill-opacity=".28" d="M-80 30C200 10 420 40 660 20S1020 -6 1240 8S1560 30 1760 12S1900 4 2000 8V90H-80Z"/>
+      <path fill="#0072E8" fill-opacity=".55" d="M-80 42C200 22 420 52 660 32S1020 8 1240 20S1560 42 1760 26S1900 18 2000 22V90H-80Z"/>
+      <path fill="#001324" d="M-80 56C200 36 420 66 660 46S1020 22 1240 34S1560 56 1760 40S1900 32 2000 36V91H-80Z"/>
+    </svg>
+
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="#inicio" aria-label="Biinyu Studio, volver al inicio">
+          <img src="assets/img/logo-claro.svg" alt="Biinyu Studio" width="195" height="72" loading="lazy">
+        </a>
+        <p class="site-footer__tagline">Estudio creativo de experiencias interactivas: plataformas, apps, videojuegos y experiencias inmersivas que funcionan.</p>
+        <p class="site-footer__place">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          Cartagena de Indias, Colombia · Desde 2016
+        </p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Secciones">
+        <h2 class="site-footer__heading">Explora</h2>
+        <ul class="site-footer__links">
+          <li><a href="#que-hacemos">Qué hacemos</a></li>
+          <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#productos-propios">Productos propios</a></li>
+          <li><a href="#logros">Logros</a></li>
+          <li><a href="#el-estudio">El estudio</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Hablemos</h2>
+        <ul class="site-footer__links site-footer__links--contact">
+          <li>
+            <a href="https://wa.me/573214419852?text=Hola%20Biinyu%2C%20quiero%20contarles%20mi%20reto" target="_blank" rel="noopener" data-cta="footer-whatsapp">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.8L4 20Z"/><path d="M9 9.5c.3 1.9 1.6 3.3 3.6 4.1l1.1-1.1 1.8.8-.4 1.6c-3.3.2-6.6-2.9-6.5-6.3l1.6-.4.8 1.8L9 9.5Z"/></svg>
+              +57 321 441 9852
+            </a>
+          </li>
+          <li>
+            <a href="mailto:admin@biinyu.com.co?subject=Quiero%20contarles%20mi%20reto" data-cta="footer-email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="3.5"/><path d="M7 9.5l3.8 2.3c.8.5 1.6.5 2.4 0L17 9.5"/></svg>
+              admin@biinyu.com.co
+            </a>
+          </li>
+          <li>
+            <a href="https://www.biinyu.com" target="_blank" rel="noopener" data-cta="footer-web">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="3.6" ry="9"/><path d="M3 12h18"/></svg>
+              www.biinyu.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="site-footer__cta">
+        <p class="site-footer__cta-title">¿Tienes un reto en mente?</p>
+        <a class="btn btn--primary site-footer__cta-btn" href="https://wa.me/573214419852?text=Hola%20Biinyu%2C%20quiero%20contarles%20mi%20reto" target="_blank" rel="noopener" data-cta="footer-cuentanos">Cuéntanos tu reto</a>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© <span data-year>2026</span> Biinyu Studio. Todos los derechos reservados.</p>
+      <a class="site-footer__top" href="#inicio" aria-label="Volver arriba">
+        Volver arriba
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/parallax.js" defer></script>
+</body>
+</html>
